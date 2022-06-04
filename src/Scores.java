@@ -35,7 +35,8 @@ public class Scores {
       */
     private void setHighScoreFromFile() {
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("files/highscore.txt"));
+            BufferedReader reader = new BufferedReader(
+                    new FileReader("files/highscore.txt"));
             String line = reader.readLine();
             highScore = getHighScoreFromString(line);
             reader.close();
@@ -137,7 +138,8 @@ public class Scores {
       */
     private void writeScoresToFile() {
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter("files/scores.txt", false));
+            BufferedWriter writer = new BufferedWriter(
+                    new FileWriter("files/scores.txt", false));
             int gameNumber = 0;
             writer.write("Scores:");
             writer.newLine();
